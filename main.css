@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sedans,
+.Suvs,
+.luxury {
+    width: 20%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: left 20% top 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Sedans {
+    background-color: hsl(31, 77%, 52%);
+    background-image: url(images/icon-sedans.svg);
+}
+
+.Suvs {
+    background-color: hsl(184, 100%, 22%);
+    background-image: url(images/icon-suvs.svg);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    background-image: url(images/icon-luxury.svg);
+}
+
+p:last-of-type {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Kumbh Sans", sans-serif;
+    line-height: 35px;
+    letter-spacing: 1px;
+    width: 221px;
+    margin-left: 52.2px;
+    margin-right: auto;
+}
+
+
+p:first-child {
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display";
+    text-transform: uppercase;
+    font-size: 44px;
+    margin-left: 52.2px;
+    margin-top: 56px;
+    margin-bottom: -27px;
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    font-family: "Kumbh Sans", sans-serif;
+    width: 51%;
+    padding: 12px;
+    border-radius: 37px;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 95%);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-left: 52.2px;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+
+
+}
+
+.luxury p:last-of-type {
+    width: 228px;
+}
+
+.Sedans button {
+    color: hsl(31, 77%, 52%);
+    /* color: inherit didn't work (i dont know why ?)*/
+}
+
+.Suvs button {
+    color: hsl(184, 100%, 22%);
+    /* color: inherit didn't work (i dont know why ?)*/
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+    /* color: inherit didn't work (i dont know why ?)*/
+}
+
+button:hover {
+    background-color: inherit;
+    color: hsl(0, 0%, 95%);
+
+}
+
+@media (min-width:375px) and (max-width:1439px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Sedans,
+    .Suvs,
+    .luxury {
+        width: 315px;
+        height: 464px;
+    }
+
+    .Sedans {
+        margin-top: 49px;
+    }
+
+    .luxury {
+        margin-bottom: 49px;
+    }
+}
